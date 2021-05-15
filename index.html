@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TextUtil</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+        <header>
+
+                <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background: royalblue;">
+                    <div class="container">
+                      <a href="/" class="navbar-brand">
+                        <span class="text-uppercase font-weight-bold">TextUtil</span><sub> By Manoj</sub>
+                      </a>
+                  
+                      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+                  
+                      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item active"><a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+                          <li class="nav-item"><a href="" class="nav-link">Learn English</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+             </header>
+<div class="container-fluid" style="margin-top:70px;">
+    <div class="container" align=center>
+        <h3>Simply Enter Your text and shoose the Case you want to convert to</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Change Font</p>
+                <select id="fonts" name="fonts">
+                        <option value="">None</option>
+                        <option value="normal">Normal</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="inherit">inherit</option>
+                        <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                        <option value="Georgia, 'Times New Roman', Times, serif">Georgia, 'Times New Roman', Times, serif</option>
+                        <option value="cursive">cursive</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Serif">Serif</option>
+                        <option value="sans-serif">Sans-serif</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                        <option value="monospace">monospace</option>
+                      </select>
+                      <a class="btn bg-success" onclick="ChangeFont()">Apply</a>
+            </div>
+            <div class="col-sm-2">
+                <p>Words: <b id="words">0</b></p>
+                <p>Characters: <b id="characters">0</b></p>
+            </div>
+            <div class="col-sm-5" align=right>
+                <div class="row">
+                        <a class="btn m-2 bg-info" onclick="CopytoClick()">Copy to Clipboard</a>
+                        <a class="btn m-2 bg-danger" id="clear" onclick="Clear()">Clear</a>
+                        <a class="btn m-2 bg-success" id="download" onclick="DownloadText()">Download Text</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+  <div class="container">
+    <div class="form-group">
+        <textarea class="form-control" placeholder="Enter Your Text Here" rows="15" id="text" onkeyup="Count()"></textarea>
+    </div>
+    <div class="row action-container" align=center>
+       <a class="btn m-1 bg-primary" onclick="UperCase()">UPPER CASE</a>
+       <a class="btn m-1 bg-primary" onclick="Capitalized()">Capitalized Case</a>
+       <a class="btn m-1 bg-primary" onclick="LowerCase()">lower case</a>
+       <a class="btn m-1 bg-primary" onclick="Capitalized()">Title Case</a>
+       <a class="btn m-1 bg-success" onclick="AternateCase()">aLtErNaTiNg cAsE</a>
+       <a class="btn m-1 bg-success" onclick="AternateCase2()">AlTeRnAtInG CaSe</a>
+       <a class="btn m-1 bg-success" onclick="InverseCase()">InVeRsE CaSe</a>
+       <a class="btn m-1 btn-info" onclick="ItalicCase()">Italic Text</a>
+       <a class="btn m-1 btn-info" onclick="BoldCase()"><b>Bold Text</b></a>
+       <a class="btn m-1 bg-danger btn" onclick="ReverseString()">Reverse Text</a>
+       <a class="btn m-1 bg-danger btn" onclick="Reset()">Reset</a>
+    </div>
+  </div>
+  <div class="container mt-10">
+      <br>
+      <h4>Welcome to the <b>TEXTUTIL</b> Convert Case Text Generator Tool</h4>
+      <br>
+      <div class="card">
+            <h5>👉 UPPER CASE</h5>
+            <p><b>It will transform all letter in your text into Upper Case letter</b></p>
+      </div>
+
+      <div class="card">
+            <h5>👉 lower case</h5>
+            <p><b>It will transform all letter in your text into lower case letter</b></p>
+            
+      </div>
+
+      <div class="card">
+            <h5>👉 Capitalized Case</h5>
+            <p><b>It will transform first letter of each words in your text into Upper Case letter and remaining letters of each word in your text into lower case letter.</b></p>
+              
+      </div>
+
+      <div class="card">
+            <h5>👉 Title Case</h5>
+            <p><b>It will transform first letter of each words in your text into Upper Case letter and remaining letters of each word in your text into lower case letter.</b></p>
+            </div>
+
+      <div class="card">
+            <h5>👉 aLtErNaTiNg cAsE</h5>
+            <p><b>It will transform all odd position letter into lower case and all even position letter into Upper case in your text </b></p>
+             </div>
+
+      <div class="card">
+            <h5>👉 AlTeRnAtInG CaSe</h5>
+            <p><b>It will transform all even position letter into lower case and all odd position letter into Upper case in your text </b></p>
+            </div>
+
+      <div class="card">
+            <h5>👉 InVeRsE CaSe</h5>
+            <p><b>It will transform all Upper Case into Lower Case and Lower Case into Upper Case  in your text.</b></p>
+      </div>
+      <div class="card">
+            <h5>👉 Italic Text</h5>
+            <p><b>It will transform all text into Italic Like- Hello -> <i>Hello</i></b></p>
+      </div>
+      <div class="card">
+            <h5>👉 Bold Text</h5>
+            <p><b>It will transform all text into Bold Style.</b></p>
+      </div>
+
+      <div class="card">
+            <h5>👉 Reverse Text</h5>
+            <p><b>It will Reverse all text.</b></p>
+      </div>
+      <div class="card">
+            <h5>👉 Copy to Clipboard</h5>
+            <p><b>It will copy text from textarea into your Clipboard</b></p>
+      </div>
+
+      <div class="card">
+            <h5>👉 Clear</h5>
+            <p><b>It will Clear all text from textarea</b></p>
+      </div>
+      <div class="card">
+            <h5>👉 Download Text</h5>
+            <p><b>It will download Your Text in your local computer as txt file</b></p>
+      </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
