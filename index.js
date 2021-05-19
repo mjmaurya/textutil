@@ -201,3 +201,34 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+
+
+var params={'url':'https://mjmaurya.github.io/textutil/', 'title':'TextUtil-Convert upper case to lower case, lower case to upper case and more!', 'tags':'textutil'};
+function shareIt(social){
+    console.log(params);
+    // var params = JSON.parse(params);
+    var button= '';
+    switch (social) {
+     case 'facebook':
+      button='http://www.facebook.com/share.php?u='+params.url;
+      break;
+     case 'twitter':
+      button='https://twitter.com/share?url='+params.url+'&amp;text='+params.title+'&amp;hashtags='+params.tags;
+      break;
+     case 'whatsapp':
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+       button='whatsapp://send?text='+params.url;
+      }else{
+       button='https://web.whatsapp.com/send?text='+params.url;
+      }
+      break;
+     case 'linkedin':
+      button='http://www.linkedin.com/shareArticle?mini=true&amp;url='+params.url;
+      break;
+     default:
+      break;
+    }
+    console.log(button);
+    window.open(button,'_blank'); 
+   }
