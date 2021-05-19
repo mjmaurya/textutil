@@ -6,22 +6,21 @@ a{
     text-align: center;
 }
 .modal-body .social{
+    border-radius: 5px;
+    cursor: pointer;
     color: white;
     padding: 6px;
     margin: 10px 10px 10px 10px;
 }
-.modal-body .fa-instagram{
-background: indianred;
-}
-.modal-body .fa-facebook{
-    background: indianred;
+.modal-body .fa-twitter{
+    background: #00ccff;
     }
 .modal-body .fa-linkedin{
-    background: indianred;
+    background: #0066cc;
 }
-.modal-body .fa-twitter{
-    background: indianred;
+.modal-body .fa-facebook{
+    background: #0000ff;
 }
 .modal-body .fa-whatsapp{
-    background: indianred;
+    background: #00b300;
     }
