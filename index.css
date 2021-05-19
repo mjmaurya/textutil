@@ -2,3 +2,26 @@ a{
     color:#fff;
     text-decoration: none;
 }
+.modal-body{
+    text-align: center;
+}
+.modal-body .social{
+    color: white;
+    padding: 6px;
+    margin: 10px 10px 10px 10px;
+}
+.modal-body .fa-instagram{
+background: indianred;
+}
+.modal-body .fa-facebook{
+    background: indianred;
+    }
+.modal-body .fa-linkedin{
+    background: indianred;
+}
+.modal-body .fa-twitter{
+    background: indianred;
+}
+.modal-body .fa-whatsapp{
+    background: indianred;
+    }
