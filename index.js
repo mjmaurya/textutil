@@ -214,7 +214,7 @@ function shareIt(social){
       button='http://www.facebook.com/share.php?u='+params.url;
       break;
      case 'twitter':
-      button='https://twitter.com/share?url='+params.url+'&amp;text='+params.title+'&amp;hashtags='+params.tags;
+      button='https://twitter.com/share?url='+params.url+'&text='+params.title+'&hashtags='+params.tags;
       break;
      case 'whatsapp':
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -224,7 +224,7 @@ function shareIt(social){
       }
       break;
      case 'linkedin':
-      button='http://www.linkedin.com/shareArticle?mini=true&amp;url='+params.url;
+      button='http://www.linkedin.com/shareArticle?mini=true&url='+params.url;
       break;
      default:
       break;
